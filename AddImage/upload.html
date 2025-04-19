@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Image and Video Upload</title>
+  <link rel="stylesheet" href="upload.css" />
+</head>
+<body>
+  <main class="container" role="main">
+    <h1>Media Uploader</h1>
+
+    <section
+      id="drop-area"
+      class="drop-area"
+      aria-label="File Upload Area"
+      tabindex="0"
+    >
+      <p>Drag & Drop your images or videos here, or</p>
+      <button id="fileSelectBtn" class="btn" aria-label="Select files to upload">
+        Select Files
+      </button>
+      <input
+        type="file"
+        id="fileElem"
+        multiple
+        accept="image/*,video/*"
+        hidden
+      />
+    </section>
+
+    <section id="gallery" aria-live="polite" aria-label="Uploaded media preview"></section>
+  </main>
+
+<div id="modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true" aria-label="Media preview">
+  <button id="modalCloseBtn" class="modal-close-btn" aria-label="Close preview">&times;</button>
+  <div class="modal-content" tabindex="0"></div>
+</div>
+
+  <script src="upload.js"></script>
+</body>
+</html>
